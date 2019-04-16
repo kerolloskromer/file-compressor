@@ -9,6 +9,10 @@ import android.support.v4.content.FileProvider;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Created by Kerollos Kromer on 17-Mar-19.
@@ -118,5 +122,15 @@ class FileUtils {
       }
     }
     return "";
+  }
+
+  static String getCurrentDateTime() {
+    DateFormat dfDate = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
+    String date = dfDate.format(Calendar.getInstance().getTime());
+
+    DateFormat dfTime = new SimpleDateFormat("HHmmss", Locale.ENGLISH);
+    String time = dfTime.format(Calendar.getInstance().getTime());
+
+    return date + time;
   }
 }

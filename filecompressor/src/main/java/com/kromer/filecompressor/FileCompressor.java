@@ -138,8 +138,8 @@ public class FileCompressor extends AsyncTask<File, Integer, File> {
 
     Log.d(TAG, "Width :" + b.getWidth() + " Height :" + b.getHeight());
 
-    String fileName = "_compressed";
-    File compressedFile = new File(context.getCacheDir(), fileName + fileExtension);
+    String fileName = FileUtils.getCurrentDateTime() + fileExtension;
+    File compressedFile = new File(context.getCacheDir(), fileName);
     Log.d(TAG, compressedFile.getPath());
     Bitmap.CompressFormat compressFormat =
         fileExtension.contains("png") ? Bitmap.CompressFormat.PNG : Bitmap.CompressFormat.JPEG;

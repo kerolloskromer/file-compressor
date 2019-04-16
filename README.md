@@ -54,6 +54,16 @@ fileCompressor.execute(file);
         }
       };
 ```
+5- DO NOT forget to dispose
+```
+  @Override
+  protected void onDestroy() {
+    if (fileCompressor != null) {
+      fileCompressor.dispose();
+    }
+    super.onDestroy();
+  }
+```
 ## Report Bug / Issue / Improvement
 
 Please feel free to report bug , issue or improvement - see the [Issues](https://github.com/kerolloskromer/file-compressor/issues) section fisrt to prevent duplicates.

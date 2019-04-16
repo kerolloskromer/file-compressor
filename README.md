@@ -29,9 +29,11 @@ allprojects {
 ```
 3- Start compression task
 ```
-FileCompressor fileCompressor = new FileCompressor(MainActivity.this, compressionListener, true);
+FileCompressor fileCompressor = new FileCompressor(context, compressionListener, delete);
 fileCompressor.execute(file);
 ```
+"delete" is boolean set to true if you want to delete the new compressed file when you are done with it
+
 4- Listen on compression task
 ```
   FileCompressor.CompressionListener compressionListener =

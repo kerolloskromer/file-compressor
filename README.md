@@ -2,7 +2,7 @@
 
 # File Compressor
 
-Helper Utility to easily compress files with convenient callbacks
+Android Library to easily compress files with convenient callbacks
 
 ## Currently Supported Files
 
